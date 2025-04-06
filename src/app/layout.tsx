@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Rodrigo - Full Stack Developer",
   description:
     "Portfolio of Rodrigo, a Full Stack Developer with over 5 years of experience.",
+
+  verification: {
+    google: "Kskl0t2rMhng5Bygnen-BvSVMRuUHtJadKpF_-ZRzdU",
+  },
 };
 
 export default function RootLayout({
