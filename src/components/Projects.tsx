@@ -63,12 +63,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-10 sm:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(54,228,218,0.05),transparent_70%)]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div data-aos="fade-up" className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 gradient-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Featured Projects
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>

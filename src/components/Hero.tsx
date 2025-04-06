@@ -115,19 +115,19 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:mt-28 sm:px-6 lg:px-8 h-full flex flex-col">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12 flex-1">
           <div data-aos="fade-right" className="w-full md:w-1/2 text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="flex justify-center sm:block text-4xl md:text-5xl font-bold mb-4">
               Hi, Welcome.
             </h1>
-            <h1 className="text-4xl md:text-[56px] font-bold mb-4">
+            <h1 className="flex justify-center  text-4xl md:text-[56px] font-bold mb-4">
               I'm
-              <span className="bg-gradient-primary bg-clip-text text-transparent  gradient-text">
+              <span className="flex justify-center  ml-1 bg-gradient-primary bg-clip-text text-transparent  gradient-text">
                 Rodrigo Medeiros
               </span>
             </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-400 mb-8">
+            <h2 className="flex justify-center   text-xl sm:text-2xl md:text-3xl text-gray-400 mb-2 sm:mb-8">
               Full-Stack Developer & Tech Enthusiast
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-xl">
+            <p className="flex justify-center  text-sm sm:text-lg text-gray-300 mb-8 max-w-xl">
               Building cutting-edge digital solutions with over 5 years of
               expertise in full-stack development and cloud architecture.
             </p>
@@ -137,7 +137,7 @@ const Hero = () => {
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-8 py-3 cursor-pointer rounded-full bg-[#00FF94] text-black font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all transform  duration-300 hover:text-gray-800  ease-in-out hover:scale-110"
+              className="flex justify-center mx-auto sm:mx-0 px-8 py-3 cursor-pointer rounded-full bg-[#00FF94] text-black font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all transform  duration-300 hover:text-gray-800  ease-in-out hover:scale-110"
             >
               Let's Build Something Amazing
             </button>
@@ -150,11 +150,11 @@ const Hero = () => {
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-gradient-primary/20 rounded-full blur-3xl"></div>
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                src="/prof-pic-rodd.png"
                 alt="Rodrigo"
                 width={384}
                 height={384}
-                className="w-full h-full object-cover rounded-full border-2 border-primary/30"
+                className="w-full h-full object-cover rounded-full border-2  border-green-400 bg-gradient-to-t from-stone-950 via-stone-900 to-stone-950 "
                 priority
               />
             </div>

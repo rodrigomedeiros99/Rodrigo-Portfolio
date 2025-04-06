@@ -31,7 +31,7 @@ const Navbar = () => {
         hasScrolled ? "glass-effect" : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto scroll-smooth px-4 sm:px-6 lg:px-1">
+      <div className="max-w-7xl mx-auto scroll-smooth  sm:px-6 lg:px-1">
         <div className="flex items-center h-12">
           <a href="#home">
             <div className="flex-shrink-0 flex justify-center items-center">
@@ -87,14 +87,14 @@ const Navbar = () => {
       {isOpen && (
         <div
           data-aos="fade-down"
-          className="md:hidden rounded-xl  glass-effect"
+          className="md:hidden rounded-xl  glass-effect "
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {menuItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full px-3 py-2 text-gray-100 hover:text-[#00DC82] transition-colors text-center"
+                className="block w-full px-3 py-2 text-gray-50  text-center"
               >
                 {item}
               </button>
