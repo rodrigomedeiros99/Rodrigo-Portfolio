@@ -22,7 +22,7 @@ const projects = [
     description:
       "A modern barbershop platform with online appointment scheduling, stylist selection and a seamless user experience.",
     image: "/barbershop-photo.png",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+    technologies: ["React", "Next.js", "Tailwindcss", "Supabase"],
     stats: {
       stars: 245,
       downloads: "5.1k",
@@ -50,7 +50,7 @@ const projects = [
     description:
       "A real-time SpaceX mission tracking platform with detailed launch updates, mission schedules, and space exploration news.",
     image: "/space-x-photo.png",
-    technologies: ["React", "GraphQL", "Node.js", "Redis"],
+    technologies: ["Javascript", "BootStap", "CSS"],
     stats: {
       stars: 312,
       downloads: "6.2k",
@@ -113,11 +113,11 @@ const Projects = () => {
                 <p className="text-gray-400 mb-6 line-clamp-2">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 ">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className="px-3 py-1 bg-[#00DC82] text-black rounded-full text-sm p-2 border border-gray-900 "
                     >
                       {tech}
                     </span>

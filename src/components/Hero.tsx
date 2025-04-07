@@ -6,54 +6,54 @@ const TechStack = () => {
   const technologies1 = [
     {
       name: "Next.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      logo: "/icons/nextjs-icon.svg",
     },
     {
       name: "React",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      logo: "/icons/react-icon.svg",
     },
     {
       name: "Docker",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      logo: "/icons/docker-icon.svg",
     },
     {
       name: "PostgreSQL",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      logo: "/icons/postgresql-icon.svg",
     },
     {
       name: "Tailwind CSS",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/tailwindcss/tailwindcss-original.svg",
+      logo: "/icons/tailwindcss-icon.svg",
     },
     {
       name: "Node.js",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      logo: "/icons/nodejs-icon.svg",
     },
   ];
 
   const technologies2 = [
     {
       name: "TypeScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      logo: "/icons/typescript-icon.svg",
     },
     {
       name: "JavaScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      logo: "/icons/javascript-icon.svg",
     },
     {
       name: "Express",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/express/express-original.svg",
+      logo: "/icons/express-icon.svg",
     },
     {
       name: "Mongodb",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/mongodb/mongodb-original.svg",
+      logo: "/icons/mongodb-icon.svg",
     },
     {
       name: "Prisma",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/prisma/prisma-original.svg",
+      logo: "/icons/prisma-icon.svg",
     },
     {
       name: "Supabase",
-      logo: "https://raw.githubusercontent.com/devicons/devicon/ca28c779441053191ff11710fe24a9e6c23690d6/icons/supabase/supabase-original.svg",
+      logo: "/icons/supabase-icon.svg",
     },
   ];
 

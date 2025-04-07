@@ -52,7 +52,7 @@ const About = () => {
           <div data-aos="fade-right" className="relative">
             <div className="aspect-video rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10">
               <Image
-                src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=800&q=80"
+                src="/dev-setup.avif"
                 alt="Rodrigo working"
                 width={800}
                 height={450}

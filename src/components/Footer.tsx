@@ -12,7 +12,7 @@ const Footer = () => {
 
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/rodrigomedeiros99"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-emerald-600 transition-colors"
@@ -20,7 +20,7 @@ const Footer = () => {
               <Github size={26} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="www.linkedin.com/in/rodrigo-medeiros-a997a7306"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-emerald-600 transition-colors"

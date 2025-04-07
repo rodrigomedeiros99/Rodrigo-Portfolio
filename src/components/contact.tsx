@@ -1,13 +1,12 @@
+"use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
 
 const Contact = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -16,34 +15,39 @@ const Contact = () => {
   });
 
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(""); // ✅ String only
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Handle form submission logic here (e.g., send to API/email service)
-    console.log("Form submitted:", formData);
+    setError(""); // Clear previous errors
 
-    // Reset form fields
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    // Show success message
-    setSuccess(true);
+      const result = await res.json();
 
-    // Hide it after 5 seconds
-    setTimeout(() => setSuccess(false), 5000);
+      if (!res.ok || !result.success) {
+        throw new Error("Failed to send email.");
+      }
+
+      setSuccess(true);
+      setFormData({ name: "", email: "", message: "" }); // ✅ Reset form
+
+      setTimeout(() => setSuccess(false), 5000); // Hide after 5s
+    } catch (err) {
+      setError("❌ Failed to send message. Please try again.");
+    }
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -89,7 +93,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#00dc82] focus:border-transparent text-white placeholder-gray-400"
               />
             </div>
 
@@ -106,7 +110,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#00dc82] focus:border-transparent text-white placeholder-gray-400"
               />
             </div>
 
@@ -123,7 +127,7 @@ const Contact = () => {
                 placeholder="Your Message"
                 required
                 rows={6}
-                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-400 text-white placeholder-gray-400"
+                className="w-full pl-10 pr-4 py-3 bg-dark-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#00dc82] text-white placeholder-gray-400"
               />
             </div>
 
@@ -138,6 +142,7 @@ const Contact = () => {
             </motion.button>
           </motion.form>
 
+          {/* ✅ Success Message */}
           {success && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -146,6 +151,18 @@ const Contact = () => {
               className="mt-6 text-green-400 text-center font-semibold"
             >
               ✅ Your message has been sent successfully!
+            </motion.div>
+          )}
+
+          {/* ❌ Error Message */}
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mt-6 text-red-400 text-center font-semibold"
+            >
+              {error}
             </motion.div>
           )}
         </div>

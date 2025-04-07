@@ -28,7 +28,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-1 left-1/2 transform -translate-x-1/2 w-full  rounded-4xl max-w-[85rem] z-50 px-4 transition-all duration-300 ${
-        hasScrolled ? "glass-effect" : ""
+        hasScrolled
+          ? " bg-zinc-700/30 backdrop-blur-md border border-zinc-900/50"
+          : ""
       }`}
     >
       <div className="max-w-7xl mx-auto scroll-smooth  sm:px-6 lg:px-1">
@@ -64,7 +66,7 @@ const Navbar = () => {
               <Github size={26} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="www.linkedin.com/in/rodrigo-medeiros-a997a7306"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#00DC82]"
@@ -101,7 +103,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center justify-center space-x-4 px-3 py-2">
               <a
-                href="https://github.com"
+                href="https://github.com/rodrigomedeiros99"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-100 hover:text-[#00DC82]"
@@ -109,7 +111,7 @@ const Navbar = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="www.linkedin.com/in/rodrigo-medeiros-a997a7306"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#00DC82]"
