@@ -119,7 +119,7 @@ const Hero = () => {
               Hi, Welcome.
             </h1>
             <h1 className="flex justify-center  text-4xl md:text-[56px] font-bold mb-4">
-              I'm
+              I&apos;m
               <span className="flex justify-center  ml-1 bg-gradient-primary bg-clip-text text-transparent  gradient-text">
                 Rodrigo Medeiros
               </span>
@@ -139,7 +139,7 @@ const Hero = () => {
               }
               className="flex justify-center mx-auto sm:mx-0 px-8 py-3 cursor-pointer rounded-full bg-[#00FF94] text-black font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all transform  duration-300 hover:text-gray-800  ease-in-out hover:scale-110"
             >
-              Let's Build Something Amazing
+              Let&apos;s Build Something Amazing
             </button>
           </div>
 

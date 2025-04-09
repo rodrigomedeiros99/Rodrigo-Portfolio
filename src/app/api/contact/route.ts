@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, message } = body;
 
-    const data = await resend.emails.send({
+    await resend.emails.send({
       from: process.env.EMAIL_FROM!,
       to: process.env.EMAIL_TO!,
       subject: `New message from ${name}`,

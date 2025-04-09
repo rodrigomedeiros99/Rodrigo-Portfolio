@@ -15,13 +15,8 @@ const Contact = () => {
     message: "",
   });
 
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(""); // ✅ String only
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    setError(""); // Clear previous errors
 
     try {
       const res = await fetch("/api/contact", {
@@ -36,15 +31,11 @@ const Contact = () => {
         throw new Error("Failed to send email.");
       }
 
-      setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
 
-      showToast("✅ Your message has been sent!", "success"); // ✅ SUCESSO
-
-      setTimeout(() => setSuccess(false), 5000);
-    } catch (err) {
-      showToast("❌ Failed to send message. Please try again.", "error"); // ❌ ERRO
-      setError("❌ Failed to send message. Please try again.");
+      showToast("✅ Your message has been sent!", "success");
+    } catch {
+      showToast("❌ Failed to send message. Please try again.", "error");
     }
   };
 
@@ -72,7 +63,7 @@ const Contact = () => {
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential opportunities?
-            I'd love to hear from you!
+            I&apos;d love to hear from you!
           </p>
         </motion.div>
 

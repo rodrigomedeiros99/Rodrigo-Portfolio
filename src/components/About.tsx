@@ -42,7 +42,7 @@ const About = () => {
           </h2>
           <div className="h-1 w-20 bg-gradient-primary mx-auto mb-8"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            With over 5 years of experience in full-stack development, I've
+            With over 5 years of experience in full-stack development, I&apos;ve
             successfully delivered 25+ projects, combining technical expertise
             with a passion for creating exceptional user experiences.
           </p>
@@ -72,8 +72,9 @@ const About = () => {
               and PostgreSQL.
             </p>
             <p className="text-gray-400">
-              I'm passionate about creating clean, efficient code and staying
-              up-to-date with the latest industry trends and best practices.
+              I&apos;m passionate about creating clean, efficient code and
+              staying up-to-date with the latest industry trends and best
+              practices.
             </p>
           </div>
         </div>
