@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
+import { showToast } from "@/utils/showToast";
 
 const Contact = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -36,10 +37,13 @@ const Contact = () => {
       }
 
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" }); // ✅ Reset form
+      setFormData({ name: "", email: "", message: "" });
 
-      setTimeout(() => setSuccess(false), 5000); // Hide after 5s
+      showToast("✅ Your message has been sent!", "success"); // ✅ SUCESSO
+
+      setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
+      showToast("❌ Failed to send message. Please try again.", "error"); // ❌ ERRO
       setError("❌ Failed to send message. Please try again.");
     }
   };
@@ -141,30 +145,6 @@ const Contact = () => {
               <Send size={20} />
             </motion.button>
           </motion.form>
-
-          {/* ✅ Success Message */}
-          {success && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mt-6 text-green-400 text-center font-semibold"
-            >
-              ✅ Your message has been sent successfully!
-            </motion.div>
-          )}
-
-          {/* ❌ Error Message */}
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mt-6 text-red-400 text-center font-semibold"
-            >
-              {error}
-            </motion.div>
-          )}
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ const projects = [
       rating: 4.7,
     },
     liveUrl: "https://hot-pizza.vercel.app/",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/rodrigomedeiros99/hot-pizza.git",
   },
   {
     title: "Space-X Web App",
@@ -57,7 +57,7 @@ const projects = [
       rating: 4.9,
     },
     liveUrl: "https://space-x-three-theta.vercel.app/index.html",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/rodrigomedeiros99/Space-X.git",
   },
 ];
 

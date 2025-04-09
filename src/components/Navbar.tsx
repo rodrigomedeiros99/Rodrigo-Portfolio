@@ -27,9 +27,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-1 left-1/2 transform -translate-x-1/2 w-full  rounded-4xl max-w-[85rem] z-50 px-4 transition-all duration-300 ${
+      className={`fixed top-1 left-1/2 transform -translate-x-1/2 w-full  rounded-4xl max-w-[85rem] z-50 px-4 transition-all duration-300 bg-zinc-700/30 backdrop-blur-md border border-neutral-950/100 ${
         hasScrolled
-          ? " bg-[#ffffff0d] backdrop-blur-md border border-zinc-900/50"
+          ? " bg-zinc-700/30 backdrop-blur-md border border-zinc-900/50"
           : ""
       }`}
     >
