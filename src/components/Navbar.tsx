@@ -66,7 +66,7 @@ const Navbar = () => {
               <Github size={26} />
             </a>
             <a
-              href="www.linkedin.com/in/rodrigo-medeiros-a997a7306"
+              href="https://www.linkedin.com/in/rodrigo-medeiros-a997a7306"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-[#00DC82]"
